@@ -1901,7 +1901,9 @@
 <script>
   const SUPABASE_URL = "https://sirjciddycupyuiugzlz.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_EI24Qr-upjCYYKycCPdo8g_l4OlWeTw";
-  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    db: { schema: "baby_checklist" }
+  });
 
   let activeCategory = "all";
   let searchFilter = "";
@@ -1941,7 +1943,7 @@
   // Push one row's current state to Supabase (checkbox, edited text, memo)
   async function saveRow(row) {
     const { error } = await sb
-      .from("baby_checklist_items")
+      .from("items")
       .upsert(readRow(row), { onConflict: "item_id" });
     if (error) {
       console.error("Supabase save error", error);
@@ -1970,7 +1972,7 @@
 
   // Initial hydrate from Supabase
   async function loadAllFromSupabase() {
-    const { data, error } = await sb.from("baby_checklist_items").select("*");
+    const { data, error } = await sb.from("items").select("*");
     if (error) {
       console.error("Supabase load error", error);
       return;
@@ -1987,7 +1989,7 @@
   // Live sync: reflect the other person's edits without a page reload
   function subscribeRealtime() {
     sb.channel("checklist-sync")
-      .on("postgres_changes", { event: "*", schema: "public", table: "baby_checklist_items" }, (payload) => {
+      .on("postgres_changes", { event: "*", schema: "baby_checklist", table: "items" }, (payload) => {
         const r = payload.new && Object.keys(payload.new).length ? payload.new : payload.old;
         if (!r) return;
         const row = document.querySelector(`.item-row[data-id="${r.item_id}"]`);
@@ -2120,7 +2122,7 @@
           row.classList.remove("checked");
         });
         updateStats();
-        const { error } = await sb.from("baby_checklist_items").update({ checked: false }).neq("item_id", "");
+        const { error } = await sb.from("items").update({ checked: false }).neq("item_id", "");
         if (error) console.error("Supabase reset error", error);
       }
     });
