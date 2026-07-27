@@ -333,10 +333,17 @@
       transform: rotate(45deg);
     }
 
+    .control-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
     .skip-btn {
       width: 24px;
       height: 24px;
-      margin-top: 3px;
       border-radius: 8px;
       border: 2px solid var(--border-color);
       background: white;
@@ -374,6 +381,7 @@
 
     .item-content {
       flex: 1;
+      min-width: 0;
     }
 
     .item-header {
@@ -690,11 +698,13 @@
     <h2 class="category-group-title" data-category="수유">🍼 수유 용품</h2>
     <div class="item-row" data-id="1" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-1">
-          <label for="check-1" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-1">
+            <label for="check-1" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">젖병 (160ml 소형)</span>
@@ -710,11 +720,13 @@
     </div>
     <div class="item-row" data-id="2" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-2">
-          <label for="check-2" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-2">
+            <label for="check-2" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">젖꼭지 (SS/S 단계)</span>
@@ -730,11 +742,13 @@
     </div>
     <div class="item-row" data-id="3" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-3">
-          <label for="check-3" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-3">
+            <label for="check-3" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">분유포트</span>
@@ -750,11 +764,13 @@
     </div>
     <div class="item-row" data-id="4" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-4">
-          <label for="check-4" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-4">
+            <label for="check-4" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">자동분유제조기</span>
@@ -770,11 +786,13 @@
     </div>
     <div class="item-row" data-id="5" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-5">
-          <label for="check-5" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-5">
+            <label for="check-5" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">젖병 소독기</span>
@@ -790,11 +808,13 @@
     </div>
     <div class="item-row" data-id="6" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-6">
-          <label for="check-6" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-6">
+            <label for="check-6" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">역류방지쿠션</span>
@@ -810,11 +830,13 @@
     </div>
     <div class="item-row" data-id="7" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-7">
-          <label for="check-7" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-7">
+            <label for="check-7" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">수유쿠션</span>
@@ -831,11 +853,13 @@
 
     <div class="item-row" data-id="31" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-31">
-          <label for="check-31" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-31">
+            <label for="check-31" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">쪽쪽이(공갈젖꼭지) & 클립</span>
@@ -851,11 +875,13 @@
     </div>
     <div class="item-row" data-id="32" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-32">
-          <label for="check-32" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-32">
+            <label for="check-32" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">수유패드/수유시트</span>
@@ -871,11 +897,13 @@
     </div>
     <div class="item-row" data-id="33" data-category="수유">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-33">
-          <label for="check-33" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-33">
+            <label for="check-33" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">젖병 세척·소독 소품 (솔/세정제/건조대/집게)</span>
@@ -894,11 +922,13 @@
     <h2 class="category-group-title" data-category="수면">💤 수면 & 침구 용품</h2>
     <div class="item-row" data-id="8" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-8">
-          <label for="check-8" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-8">
+            <label for="check-8" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기침대</span>
@@ -914,11 +944,13 @@
     </div>
     <div class="item-row" data-id="9" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-9">
-          <label for="check-9" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-9">
+            <label for="check-9" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">스와들업/속싸개</span>
@@ -934,11 +966,13 @@
     </div>
     <div class="item-row" data-id="10" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-10">
-          <label for="check-10" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-10">
+            <label for="check-10" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">모로반사 방지 이불</span>
@@ -954,11 +988,13 @@
     </div>
     <div class="item-row" data-id="11" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-11">
-          <label for="check-11" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-11">
+            <label for="check-11" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">방수 패드</span>
@@ -974,11 +1010,13 @@
     </div>
     <div class="item-row" data-id="12" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-12">
-          <label for="check-12" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-12">
+            <label for="check-12" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">태열베개 / 짱구베개</span>
@@ -995,11 +1033,13 @@
 
     <div class="item-row" data-id="34" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-34">
-          <label for="check-34" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-34">
+            <label for="check-34" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">홈캠(아기 모니터링 카메라)</span>
@@ -1015,11 +1055,13 @@
     </div>
     <div class="item-row" data-id="35" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-35">
-          <label for="check-35" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-35">
+            <label for="check-35" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">침대 매트리스 / 쿨패드</span>
@@ -1035,11 +1077,13 @@
     </div>
     <div class="item-row" data-id="36" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-36">
-          <label for="check-36" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-36">
+            <label for="check-36" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">사계절 침구(이불/커버)</span>
@@ -1055,11 +1099,13 @@
     </div>
     <div class="item-row" data-id="37" data-category="수면">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-37">
-          <label for="check-37" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-37">
+            <label for="check-37" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">옆눕베개</span>
@@ -1078,11 +1124,13 @@
     <h2 class="category-group-title" data-category="위생">🧼 위생 & 목욕 용품</h2>
     <div class="item-row" data-id="13" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-13">
-          <label for="check-13" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-13">
+            <label for="check-13" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">기저귀 (1단계/신생아용)</span>
@@ -1098,11 +1146,13 @@
     </div>
     <div class="item-row" data-id="14" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-14">
-          <label for="check-14" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-14">
+            <label for="check-14" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기 비데</span>
@@ -1118,11 +1168,13 @@
     </div>
     <div class="item-row" data-id="15" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-15">
-          <label for="check-15" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-15">
+            <label for="check-15" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기 욕조</span>
@@ -1138,11 +1190,13 @@
     </div>
     <div class="item-row" data-id="16" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-16">
-          <label for="check-16" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-16">
+            <label for="check-16" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">스킨케어 (크림/수딩젤/로션)</span>
@@ -1158,11 +1212,13 @@
     </div>
     <div class="item-row" data-id="17" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-17">
-          <label for="check-17" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-17">
+            <label for="check-17" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">손톱가위</span>
@@ -1178,11 +1234,13 @@
     </div>
     <div class="item-row" data-id="62" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-62">
-          <label for="check-62" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-62">
+            <label for="check-62" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">신생아 면봉(점착 면봉)</span>
@@ -1198,11 +1256,13 @@
     </div>
     <div class="item-row" data-id="63" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-63">
-          <label for="check-63" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-63">
+            <label for="check-63" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">신생아 핀셋(코청소용)</span>
@@ -1218,11 +1278,13 @@
     </div>
     <div class="item-row" data-id="18" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-18">
-          <label for="check-18" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-18">
+            <label for="check-18" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">귀 체온계</span>
@@ -1238,11 +1300,13 @@
     </div>
     <div class="item-row" data-id="19" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-19">
-          <label for="check-19" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-19">
+            <label for="check-19" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">온습도계</span>
@@ -1259,11 +1323,13 @@
 
     <div class="item-row" data-id="38" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-38">
-          <label for="check-38" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-38">
+            <label for="check-38" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">목욕물 온도계</span>
@@ -1279,11 +1345,13 @@
     </div>
     <div class="item-row" data-id="39" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-39">
-          <label for="check-39" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-39">
+            <label for="check-39" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">엉덩이(둔부) 세정제</span>
@@ -1299,11 +1367,13 @@
     </div>
     <div class="item-row" data-id="40" data-category="위생">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-40">
-          <label for="check-40" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-40">
+            <label for="check-40" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">욕조 수전 커버</span>
@@ -1322,11 +1392,13 @@
     <h2 class="category-group-title" data-category="의류">👕 의류 용품</h2>
     <div class="item-row" data-id="20" data-category="의류">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-20">
-          <label for="check-20" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-20">
+            <label for="check-20" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">배냇저고리 / 배냇슈트</span>
@@ -1342,11 +1414,13 @@
     </div>
     <div class="item-row" data-id="21" data-category="의류">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-21">
-          <label for="check-21" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-21">
+            <label for="check-21" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">바디슈트 / 우주복</span>
@@ -1362,11 +1436,13 @@
     </div>
     <div class="item-row" data-id="22" data-category="의류">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-22">
-          <label for="check-22" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-22">
+            <label for="check-22" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">가제/엠보 손수건</span>
@@ -1382,11 +1458,13 @@
     </div>
     <div class="item-row" data-id="23" data-category="의류">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-23">
-          <label for="check-23" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-23">
+            <label for="check-23" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">손싸개 / 발싸개</span>
@@ -1403,11 +1481,13 @@
 
     <div class="item-row" data-id="41" data-category="의류">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-41">
-          <label for="check-41" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-41">
+            <label for="check-41" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">겉싸개</span>
@@ -1423,11 +1503,13 @@
     </div>
     <div class="item-row" data-id="42" data-category="의류">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-42">
-          <label for="check-42" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-42">
+            <label for="check-42" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">신생아 모자</span>
@@ -1443,11 +1525,13 @@
     </div>
     <div class="item-row" data-id="43" data-category="의류">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-43">
-          <label for="check-43" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-43">
+            <label for="check-43" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">턱받이 / 침받이</span>
@@ -1466,11 +1550,13 @@
     <h2 class="category-group-title" data-category="외출">🚗 외출 & 이동 용품</h2>
     <div class="item-row" data-id="24" data-category="외출">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-24">
-          <label for="check-24" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-24">
+            <label for="check-24" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">카시트</span>
@@ -1486,11 +1572,13 @@
     </div>
     <div class="item-row" data-id="25" data-category="외출">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-25">
-          <label for="check-25" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-25">
+            <label for="check-25" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">유모차</span>
@@ -1506,11 +1594,13 @@
     </div>
     <div class="item-row" data-id="26" data-category="외출">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-26">
-          <label for="check-26" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-26">
+            <label for="check-26" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기띠 / 슬링</span>
@@ -1527,11 +1617,13 @@
 
     <div class="item-row" data-id="44" data-category="외출">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-44">
-          <label for="check-44" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-44">
+            <label for="check-44" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">바구니형 카시트(인펀트 캐리어)</span>
@@ -1550,11 +1642,13 @@
     <h2 class="category-group-title" data-category="가전">🧸 가전 & 기타 용품</h2>
     <div class="item-row" data-id="27" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-27">
-          <label for="check-27" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-27">
+            <label for="check-27" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">타이니러브 모빌 & 거치대</span>
@@ -1570,11 +1664,13 @@
     </div>
     <div class="item-row" data-id="28" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-28">
-          <label for="check-28" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-28">
+            <label for="check-28" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">바운서</span>
@@ -1590,11 +1686,13 @@
     </div>
     <div class="item-row" data-id="29" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-29">
-          <label for="check-29" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-29">
+            <label for="check-29" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">기저귀 갈이대</span>
@@ -1610,11 +1708,13 @@
     </div>
     <div class="item-row" data-id="30" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-30">
-          <label for="check-30" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-30">
+            <label for="check-30" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">기저귀 쓰레기통</span>
@@ -1631,11 +1731,13 @@
 
     <div class="item-row" data-id="45" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-45">
-          <label for="check-45" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-45">
+            <label for="check-45" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">콧물흡입기</span>
@@ -1651,11 +1753,13 @@
     </div>
     <div class="item-row" data-id="46" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-46">
-          <label for="check-46" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-46">
+            <label for="check-46" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">가습기</span>
@@ -1671,11 +1775,13 @@
     </div>
     <div class="item-row" data-id="47" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-47">
-          <label for="check-47" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-47">
+            <label for="check-47" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기체육관(플레이짐)</span>
@@ -1691,11 +1797,13 @@
     </div>
     <div class="item-row" data-id="48" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-48">
-          <label for="check-48" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-48">
+            <label for="check-48" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">초기 발달 장난감 (흑백 초점책/헝겊책/사운드북)</span>
@@ -1711,11 +1819,13 @@
     </div>
     <div class="item-row" data-id="49" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-49">
-          <label for="check-49" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-49">
+            <label for="check-49" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">범보의자</span>
@@ -1731,11 +1841,13 @@
     </div>
     <div class="item-row" data-id="50" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-50">
-          <label for="check-50" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-50">
+            <label for="check-50" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">하이체어(식탁의자)</span>
@@ -1751,11 +1863,13 @@
     </div>
     <div class="item-row" data-id="51" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-51">
-          <label for="check-51" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-51">
+            <label for="check-51" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">정리 트롤리 / 수납함</span>
@@ -1771,11 +1885,13 @@
     </div>
     <div class="item-row" data-id="52" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-52">
-          <label for="check-52" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-52">
+            <label for="check-52" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">물티슈 / 건티슈</span>
@@ -1791,11 +1907,13 @@
     </div>
     <div class="item-row" data-id="53" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-53">
-          <label for="check-53" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-53">
+            <label for="check-53" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">소독스프레이(장난감/식기용)</span>
@@ -1811,11 +1929,13 @@
     </div>
     <div class="item-row" data-id="54" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-54">
-          <label for="check-54" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-54">
+            <label for="check-54" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">백색소음기</span>
@@ -1831,11 +1951,13 @@
     </div>
     <div class="item-row" data-id="64" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-64">
-          <label for="check-64" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-64">
+            <label for="check-64" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기 전용 세탁망</span>
@@ -1851,11 +1973,13 @@
     </div>
     <div class="item-row" data-id="65" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-65">
-          <label for="check-65" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-65">
+            <label for="check-65" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기 세탁세제</span>
@@ -1871,11 +1995,13 @@
     </div>
     <div class="item-row" data-id="66" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-66">
-          <label for="check-66" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-66">
+            <label for="check-66" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">아기 섬유유연제</span>
@@ -1891,11 +2017,13 @@
     </div>
     <div class="item-row" data-id="56" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-56">
-          <label for="check-56" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-56">
+            <label for="check-56" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">거실 매트</span>
@@ -1911,11 +2039,13 @@
     </div>
     <div class="item-row" data-id="57" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-57">
-          <label for="check-57" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-57">
+            <label for="check-57" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">수유등(취침등)</span>
@@ -1931,11 +2061,13 @@
     </div>
     <div class="item-row" data-id="58" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-58">
-          <label for="check-58" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-58">
+            <label for="check-58" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">치발기</span>
@@ -1951,11 +2083,13 @@
     </div>
     <div class="item-row" data-id="59" data-category="가전">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-59">
-          <label for="check-59" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-59">
+            <label for="check-59" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">비타민D / 유산균(영양제)</span>
@@ -1974,11 +2108,13 @@
     <h2 class="category-group-title" data-category="산모">🤱 산모(엄마) 케어 용품</h2>
     <div class="item-row" data-id="60" data-category="산모">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-60">
-          <label for="check-60" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-60">
+            <label for="check-60" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">손목보호대</span>
@@ -1994,11 +2130,13 @@
     </div>
     <div class="item-row" data-id="61" data-category="산모">
       <div class="item-main">
-        <div class="checkbox-wrapper">
-          <input type="checkbox" class="real-checkbox" id="check-61">
-          <label for="check-61" class="custom-checkbox"></label>
+        <div class="control-col">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="real-checkbox" id="check-61">
+            <label for="check-61" class="custom-checkbox"></label>
+          </div>
+          <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         </div>
-        <button class="skip-btn" type="button" title="구매 안 함 표시" aria-label="구매 안 함">✕</button>
         <div class="item-content">
           <div class="item-header">
             <span class="item-title" contenteditable="true" spellcheck="false">산후복대</span>
