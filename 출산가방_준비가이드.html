@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📖 출산가방 준비 가이드 — 맘카페·블로그·유튜브 종합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-color: #fcf9f5;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --primary-color: #e2a893;
+    --primary-dark: #cc917c;
+    --primary-light: #f6e6e0;
+    --secondary-color: #92aca0;
+    --secondary-light: #e4ece8;
+    --accent-blue: #7fa8c9;
+    --accent-blue-light: #e6eef5;
+    --text-color: #4a3e3d;
+    --text-muted: #8c7e7c;
+    --border-color: #f1eae4;
+    --shadow: 0 10px 30px -10px rgba(168, 147, 142, 0.18);
+    --shadow-sm: 0 4px 12px rgba(168, 147, 142, 0.08);
+
+    --tag-required-c: #e57373; --tag-required-bg: #ffebee;
+    --tag-csec-c: #7fa8c9; --tag-csec-bg: #e6eef5;
+    --tag-natural-c: #81b088; --tag-natural-bg: #e8f5ea;
+    --tag-optional-c: #b8a26a; --tag-optional-bg: #fbf3de;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.65;
+    padding: 48px 20px 80px;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(18, 53%, 94%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(145, 14%, 93%, 1) 0px, transparent 50%);
+  }
+  .container { width: 100%; max-width: 980px; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 28px; }
+  h1 {
+    font-size: 2.3rem; font-weight: 700; color: #3b2e2d;
+    display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;
+  }
+  .subtitle { font-size: 1.02rem; color: var(--text-muted); margin-top: 10px; }
+
+  .meta-bar {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+    margin: 20px 0 36px;
+  }
+  .meta-pill {
+    background: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 999px; padding: 7px 16px; font-size: 0.85rem;
+    color: var(--text-muted); box-shadow: var(--shadow-sm);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .meta-pill b { color: var(--text-color); }
+
+  .cross-nav {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+    margin: 0 0 30px;
+  }
+  .cross-nav a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 14px; padding: 12px 20px; font-size: 0.92rem; font-weight: 600;
+    color: var(--text-color); text-decoration: none; box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+  }
+  .cross-nav a:hover { border-color: var(--primary-color); color: var(--primary-dark); transform: translateY(-1px); }
+  .cross-nav a.primary { background: var(--primary-color); color: white; border-color: var(--primary-color); }
+  .cross-nav a.primary:hover { background: var(--primary-dark); color: white; }
+
+  .strategy-card {
+    background: var(--card-bg); border-radius: 24px; padding: 28px 30px;
+    box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,0.6);
+    margin-bottom: 40px;
+  }
+  .strategy-card h2 { font-size: 1.25rem; margin-bottom: 6px; }
+  .strategy-card .hint { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 18px; }
+  .strategy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .strategy-item {
+    background: var(--primary-light); border-radius: 16px; padding: 16px 18px;
+  }
+  .strategy-item .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%; background: var(--primary-color);
+    color: white; font-size: 0.8rem; font-weight: 700; margin-bottom: 8px;
+  }
+  .strategy-item h3 { font-size: 1rem; margin-bottom: 4px; }
+  .strategy-item p { font-size: 0.85rem; color: var(--text-muted); }
+
+  .section-title {
+    font-size: 1.4rem; font-weight: 700; margin: 44px 0 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title .count { font-size: 0.85rem; color: var(--text-muted); font-weight: 400; }
+
+  .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .cat-card {
+    background: var(--card-bg); border-radius: 20px; padding: 22px 24px;
+    box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+  }
+  .cat-card h3 {
+    font-size: 1.05rem; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+  }
+  .item-row {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--border-color); font-size: 0.9rem;
+  }
+  .item-row:last-child { border-bottom: none; }
+  .item-name { flex: 1; }
+  .item-qty { color: var(--text-muted); font-size: 0.8rem; white-space: nowrap; }
+  .tag {
+    display: inline-block; font-size: 0.68rem; padding: 2px 8px; border-radius: 999px;
+    font-weight: 600; margin-left: 6px; white-space: nowrap;
+  }
+  .tag.csec { color: var(--tag-csec-c); background: var(--tag-csec-bg); }
+  .tag.natural { color: var(--tag-natural-c); background: var(--tag-natural-bg); }
+  .tag.optional { color: var(--tag-optional-c); background: var(--tag-optional-bg); }
+
+  .compare-wrap { overflow-x: auto; }
+  table.compare {
+    width: 100%; border-collapse: collapse; background: var(--card-bg);
+    border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-sm);
+  }
+  table.compare th, table.compare td {
+    padding: 14px 18px; text-align: left; font-size: 0.9rem; border-bottom: 1px solid var(--border-color);
+  }
+  table.compare th {
+    background: var(--primary-light); font-weight: 700; font-size: 0.85rem;
+  }
+  table.compare tr:last-child td { border-bottom: none; }
+  table.compare td.natural-col { border-left: 3px solid var(--tag-natural-c); }
+  table.compare td.csec-col { border-left: 3px solid var(--tag-csec-c); }
+
+  .rank-list { display: flex; flex-direction: column; gap: 10px; }
+  .rank-item {
+    background: var(--card-bg); border-radius: 16px; padding: 14px 20px;
+    display: flex; gap: 14px; align-items: flex-start; box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+  }
+  .rank-medal { font-size: 1.3rem; line-height: 1; }
+  .rank-body strong { font-size: 0.98rem; }
+  .rank-body p { font-size: 0.85rem; color: var(--text-muted); margin-top: 3px; }
+  .src-badge {
+    font-size: 0.65rem; padding: 2px 7px; border-radius: 999px; margin-left: 6px;
+    background: var(--secondary-light); color: var(--secondary-color); font-weight: 700;
+  }
+
+  .avoid-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .avoid-card {
+    background: #fff6f5; border: 1px solid #fbdedb; border-radius: 16px; padding: 16px 18px;
+  }
+  .avoid-card strong { display: flex; gap: 6px; align-items: center; font-size: 0.92rem; }
+  .avoid-card p { font-size: 0.83rem; color: var(--text-muted); margin-top: 6px; }
+
+  .quote-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .quote-card {
+    background: var(--accent-blue-light); border-radius: 16px; padding: 18px 20px;
+    font-size: 0.88rem; position: relative;
+  }
+  .quote-card::before { content: "\201C"; font-size: 2.2rem; color: var(--accent-blue); opacity: 0.4; position: absolute; top: 4px; left: 10px; line-height: 1; }
+  .quote-card p.q { padding-left: 22px; font-style: italic; color: #3f5163; }
+  .quote-card .who { text-align: right; font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; }
+
+  footer {
+    margin-top: 50px; text-align: center; font-size: 0.78rem; color: var(--text-muted);
+  }
+  footer .src-list { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; }
+
+  @media (max-width: 720px) {
+    .strategy-grid, .cat-grid, .avoid-grid, .quote-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>📖 출산가방 준비 가이드</h1>
+    <p class="subtitle">맘카페 · 블로그 · 유튜브 실사용 후기 종합 정리 — 체크는 아래 링크에서!</p>
+  </header>
+
+  <div class="cross-nav">
+    <a href="index.html#category=출산가방" class="primary">🎒 꼬미 체크리스트에서 체크하러 가기</a>
+  </div>
+
+  <div class="meta-bar">
+    <span class="meta-pill">📅 <b>작성일</b> 2026-07-31</span>
+    <span class="meta-pill">💬 <b>Claude</b> — 맘카페·블로그 텍스트 리서치</span>
+    <span class="meta-pill">📺 <b>Antigravity</b> — 유튜브 브이로그·산부인과 채널 리서치</span>
+    <span class="meta-pill">🏥 맘스홀릭 · 마미톡 · byeolmom 외 출처</span>
+  </div>
+
+  <div class="strategy-card">
+    <h2>📦 가방은 3개로 나눠서 준비하세요</h2>
+    <p class="hint">준비 시기: 임신 <b>32~34주</b> (조기진통 대비 늦어도 35주 전 완성 권장) · 퇴원 시 신생아를 안고 이동하므로 짐을 분산하는 게 핵심 팁</p>
+    <div class="strategy-grid">
+      <div class="strategy-item">
+        <span class="num">1</span>
+        <h3>병원 가방</h3>
+        <p>입원 2~5일 분량, 최소 필수품만. 서류·산모용품 위주로 캐리어 한쪽에.</p>
+      </div>
+      <div class="strategy-item">
+        <span class="num">2</span>
+        <h3>조리원 가방</h3>
+        <p>1~2주 분량 + 모자동실용 아기용품 추가. 남편이 병원 가방과 별도로 챙겨오는 경우 많음.</p>
+      </div>
+      <div class="strategy-item">
+        <span class="num">3</span>
+        <h3>보호자 가방</h3>
+        <p>세면도구·여벌옷·개인 침구. 병원 보호자 침대는 지급 침구가 없는 경우가 많음.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">📋 카테고리별 준비물 <span class="count">7개 카테고리 · 두 리서치 취합</span></h2>
+  <div class="cat-grid">
+
+    <div class="cat-card">
+      <h3>📄 서류 / 행정 / 결제</h3>
+      <div class="item-row"><span class="item-name">신분증 (산모 &amp; 남편)</span></div>
+      <div class="item-row"><span class="item-name">산모수첩</span></div>
+      <div class="item-row"><span class="item-name">국민행복카드 &amp; 결제카드</span></div>
+      <div class="item-row"><span class="item-name">처방받은 압박스타킹</span><span class="tag csec">제왕절개</span></div>
+    </div>
+
+    <div class="cat-card">
+      <h3>🩺 산모 위생 &amp; 회복</h3>
+      <div class="item-row"><span class="item-name">맘스안심팬티</span><span class="item-qty">1~2팩<span class="tag csec">소변줄 제거 후</span></span></div>
+      <div class="item-row"><span class="item-name">생리대(중형·대형·오버나이트)</span><span class="item-qty">각 1팩</span></div>
+      <div class="item-row"><span class="item-name">마이비데/비데물티슈</span><span class="item-qty">2~3캡</span></div>
+      <div class="item-row"><span class="item-name">드라이샴푸 · 샤워티슈</span><span class="tag csec">샤워 불가 대비</span></div>
+      <div class="item-row"><span class="item-name">압박스타킹</span><span class="tag csec">수술 직후 필수</span></div>
+      <div class="item-row"><span class="item-name">산후복대 (제왕절개 전용)</span><span class="tag csec">필수</span></div>
+      <div class="item-row"><span class="item-name">손목보호대</span><span class="tag optional">관절 보호</span></div>
+      <div class="item-row"><span class="item-name">시카겔 · 흉터밴드</span><span class="tag csec">흉터 관리</span></div>
+      <div class="item-row"><span class="item-name">텀블러 + 구부러지는 빨대</span><span class="tag csec">누워서 필수</span></div>
+      <div class="item-row"><span class="item-name">가습기</span><span class="tag optional">겨울 출산 시</span></div>
+    </div>
+
+    <div class="cat-card">
+      <h3>🍼 수유 &amp; 가슴 케어</h3>
+      <div class="item-row"><span class="item-name">수유브라 / 수유나시</span><span class="item-qty">3~4벌</span></div>
+      <div class="item-row"><span class="item-name">수유패드</span><span class="item-qty">1팩 (조리원 40장+)</span></div>
+      <div class="item-row"><span class="item-name">라놀린 크림 / 비판텐 연고</span><span class="item-qty">유두 균열용</span></div>
+      <div class="item-row"><span class="item-name">양배추팩 / 양배추크림</span><span class="tag optional">젖몸살 응급템</span></div>
+      <div class="item-row"><span class="item-name">모유저장팩</span><span class="tag optional">선택</span></div>
+    </div>
+
+    <div class="cat-card">
+      <h3>👗 산모 의류 &amp; 착용품</h3>
+      <div class="item-row"><span class="item-name">발목 안 조이는 수면양말</span><span class="item-qty">3~4족</span></div>
+      <div class="item-row"><span class="item-name">폭신한 슬리퍼</span></div>
+      <div class="item-row"><span class="item-name">가디건 / 로브</span><span class="tag optional">산후풍 대비</span></div>
+      <div class="item-row"><span class="item-name">제왕절개 팬티 (V자형)</span><span class="tag csec">수술부위 안눌림</span></div>
+      <div class="item-row"><span class="item-name">넉넉한 임부 레깅스</span></div>
+    </div>
+
+    <div class="cat-card">
+      <h3>👶 아기 용품 (퇴원·조리원용)</h3>
+      <div class="item-row"><span class="item-name">배냇저고리 · 손/발싸개</span><span class="item-qty">1~2벌</span></div>
+      <div class="item-row"><span class="item-name">속싸개 · 겉싸개</span><span class="item-qty">각 1개</span></div>
+      <div class="item-row"><span class="item-name">가제 손수건</span><span class="item-qty">20~30장 (세탁완료)</span></div>
+      <div class="item-row"><span class="item-name">신생아 모자</span><span class="item-qty">딸꾹질·퇴소용</span></div>
+      <div class="item-row"><span class="item-name">바구니 카시트</span><span class="tag optional">퇴원 이동 필수</span></div>
+    </div>
+
+    <div class="cat-card">
+      <h3>🔌 생활 &amp; 잡화</h3>
+      <div class="item-row"><span class="item-name">2m 이상 멀티탭</span></div>
+      <div class="item-row"><span class="item-name">휴대폰 충전기 · 거치대</span></div>
+      <div class="item-row"><span class="item-name">걸어두는 세면 파우치</span></div>
+      <div class="item-row"><span class="item-name">가위/미니 손톱깎이</span></div>
+      <div class="item-row"><span class="item-name">디데이 달력</span><span class="tag optional">기록용</span></div>
+      <div class="item-row"><span class="item-name">영양제 (철분·칼슘·유산균)</span></div>
+    </div>
+
+    <div class="cat-card">
+      <h3>👨‍👩‍👦 보호자(남편) 용품</h3>
+      <div class="item-row"><span class="item-name">개인 세면도구 · 여벌옷</span><span class="item-qty">2~3벌</span></div>
+      <div class="item-row"><span class="item-name">얇은 이불 · 베개</span><span class="tag optional">병원 미지급</span></div>
+      <div class="item-row"><span class="item-name">슬리퍼</span></div>
+      <div class="item-row"><span class="item-name">비상식량</span><span class="item-qty">컵라면·햇반 (조리원 식사 미제공 대비)</span></div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">⚔️ 분만 방식별 차이</h2>
+  <div class="compare-wrap">
+    <table class="compare">
+      <tr><th>항목</th><th>자연분만</th><th>제왕절개</th></tr>
+      <tr><td>입원 기간</td><td class="natural-col">2박 3일 내외</td><td class="csec-col">4박 5일 ~ 5박 6일</td></tr>
+      <tr><td>안심팬티 착용</td><td class="natural-col">바로 착용 가능</td><td class="csec-col">소변줄 제거 후부터</td></tr>
+      <tr><td>샤워</td><td class="natural-col">대체로 가능</td><td class="csec-col">며칠간 불가 → 드라이샴푸/샤워티슈 필수</td></tr>
+      <tr><td>압박스타킹</td><td class="natural-col">선택</td><td class="csec-col">수술 직후 필수 착용</td></tr>
+      <tr><td>수분 섭취</td><td class="natural-col">일반 컵 가능</td><td class="csec-col">1~2일 거동 어려움 → 구부러지는 빨대 필수</td></tr>
+      <tr><td>특화 용품</td><td class="natural-col">회음부 방석(도넛 방석), 좌욕기, 마이비데</td><td class="csec-col">시카겔·흉터밴드, 하이웨이스트(V자) 팬티, 산후복대</td></tr>
+    </table>
+  </div>
+
+  <h2 class="section-title">🏆 꿀템 랭킹 <span class="count">유튜브 Top 8 + 맘카페·블로그 추가 발굴템</span></h2>
+  <div class="rank-list">
+    <div class="rank-item"><span class="rank-medal">🥇</span><div class="rank-body"><strong>맘스안심팬티 (입는 오버나이트)</strong><span class="src-badge">📺 유튜브</span><p>패드 교체 없이 팬티처럼 입고 벗어 오로 폭발기에 최고의 편안함 제공</p></div></div>
+    <div class="rank-item"><span class="rank-medal">🥈</span><div class="rank-body"><strong>2m 멀티탭 + 롱 충전 케이블</strong><span class="src-badge">📺 유튜브</span><p>침대 헤드보드 뒤 먼 콘센트 문제 해결, 누워서 폰 쓸 때 필수</p></div></div>
+    <div class="rank-item"><span class="rank-medal">🥉</span><div class="rank-body"><strong>구부러지는 빨대 / 텀블러 빨대캡</strong><span class="src-badge">📺 유튜브</span><span class="src-badge">💬 카페</span><p>제왕절개 후 고개 못 들 때 물 마시는 유일한 방법 — 두 소스 모두 강조</p></div></div>
+    <div class="rank-item"><span class="rank-medal">4️⃣</span><div class="rank-body"><strong>손목보호대</strong><span class="src-badge">💬 블로그</span><p>"출산 후 뼈관절이 약해 손목이 아플 수 있어요" — 유튜브 리서치엔 없던 실사용 팁</p></div></div>
+    <div class="rank-item"><span class="rank-medal">5️⃣</span><div class="rank-body"><strong>양배추팩 / 양배추크림</strong><span class="src-badge">📺 유튜브</span><span class="src-badge">💬 카페</span><p>"젖몸살이 출산보다 더 무서울 정도" — 3~4일차 유방 울혈 열감 즉각 완화</p></div></div>
+    <div class="rank-item"><span class="rank-medal">6️⃣</span><div class="rank-body"><strong>드라이샴푸 / 샤워티슈</strong><span class="src-badge">💬 블로그</span><p>제왕절개는 며칠간 샤워 불가 — 씻기 힘든 첫 2~3일간 매우 유용</p></div></div>
+    <div class="rank-item"><span class="rank-medal">7️⃣</span><div class="rank-body"><strong>비판텐 연고 / 라놀린 크림</strong><span class="src-badge">📺 유튜브</span><span class="src-badge">💬 카페</span><p>직수 시작 후 유두 균열·상처에 발라도 안전한 필수 상처 연고</p></div></div>
+    <div class="rank-item"><span class="rank-medal">8️⃣</span><div class="rank-body"><strong>걸어두는 압축 세면 파우치</strong><span class="src-badge">📺 유튜브</span><p>조리원/병원 수전이나 고리에 걸어 정리 정돈 편리</p></div></div>
+  </div>
+
+  <h2 class="section-title">⛔ 안 챙겨도 되는 후회템</h2>
+  <div class="avoid-grid">
+    <div class="avoid-card"><strong>❌ 과도한 신생아 의류</strong><p>병원·조리원은 100% 자체 배냇저고리 착용. 퇴원용 1벌이면 충분.</p></div>
+    <div class="avoid-card"><strong>❌ 육아서적 / 두꺼운 책</strong><p>수유·유축·수면 부족으로 책 읽을 시간이 전혀 없음.</p></div>
+    <div class="avoid-card"><strong>❌ 체온계 / 젖병 소독기</strong><p>병원·조리원에 이미 갖춰져 있음. 퇴원 후 집에서 쓸 물품.</p></div>
+    <div class="avoid-card"><strong>❌ 너무 많은 기저귀/젖병</strong><p>병원·조리원에서 기본 제공. 분유 안 맞으면 종류 바꿔야 할 수도.</p></div>
+  </div>
+
+  <h2 class="section-title">💬 실사용자 코멘트 (맘카페·블로그 원문 인용)</h2>
+  <div class="quote-grid">
+    <div class="quote-card"><p class="q">급할 때는 수유패드를 물 묻혀 얼려서 사용하고, 쿠팡으로 구입하는 게 더 좋더라고요.</p><div class="who">— byeolmom 블로그</div></div>
+    <div class="quote-card"><p class="q">에어컨 바람이 피부에 직접 닿으면 산후풍이 올 수 있어요.</p><div class="who">— byeolmom 블로그</div></div>
+    <div class="quote-card"><p class="q">제왕절개는 수술 후 1~2일은 혼자서 움직이기가 어려워요.</p><div class="who">— mom-mom.net</div></div>
+    <div class="quote-card"><p class="q">침구류는 지급이 되지 않으니 (보호자용) 얇은 이불도 꼭 챙기세요.</p><div class="who">— 마미톡 커뮤니티, 둘째맘 후기</div></div>
+  </div>
+
+  <footer>
+    <p>본 자료는 맘카페·블로그·유튜브 공개 후기를 AI가 종합·요약한 것으로, 병원·조리원마다 기본 제공 물품이 다르니 출산 전 반드시 해당 기관에 확인하세요.</p>
+    <div class="src-list">
+      <span>byeolmom.com</span><span>mom-mom.net</span><span>community.mmtalk.kr</span><span>yugacrew.com</span><span>맘스홀릭 카페</span><span>유튜브 산부인과 채널</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
