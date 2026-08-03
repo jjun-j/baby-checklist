@@ -675,6 +675,34 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* D-day */
+    .dday-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border-radius: 18px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      flex-wrap: wrap;
+      animation: slideUp 0.7s ease-out;
+    }
+
+    .dday-label {
+      font-size: 0.92rem;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
+    .dday-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
     /* Responsive */
     @media (max-width: 600px) {
       body {
@@ -702,6 +730,11 @@
     <h1>🍼 꼬미 용품 구매 체크리스트</h1>
     <p class="subtitle">꼬미 맞이 출산준비물 — 카테고리별 국민템 & 스마트 가이드</p>
   </header>
+
+  <div class="dday-card">
+    <span class="dday-label">📅 출산 예정일 2026-09-28(월)까지</span>
+    <span class="dday-value" id="ddayValue">D-</span>
+  </div>
 
   <!-- Dashboard -->
   <div class="dashboard-card">
@@ -3641,6 +3674,18 @@
   const resetBtn = document.getElementById("resetBtn");
   const saveIndicator = document.getElementById("saveIndicator");
 
+  // D-day: 출산 예정일까지 남은 일수 표시 (오늘 자정 기준)
+  function updateDday() {
+    const ddayEl = document.getElementById("ddayValue");
+    if (!ddayEl) return;
+    const dueDate = new Date(2026, 8, 28); // 2026-09-28
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    dueDate.setHours(0, 0, 0, 0);
+    const diffDays = Math.round((dueDate - today) / (1000 * 60 * 60 * 24));
+    ddayEl.innerText = diffDays === 0 ? "D-DAY" : (diffDays > 0 ? `D-${diffDays}` : `D+${Math.abs(diffDays)}`);
+  }
+
   function showSaved() {
     saveIndicator.classList.add("show");
     clearTimeout(saveIndicatorTimer);
@@ -3905,7 +3950,10 @@
   }
 
   // Run on load (only if javascript is enabled, browser environment)
-  window.addEventListener("DOMContentLoaded", initApp);
+  window.addEventListener("DOMContentLoaded", () => {
+    updateDday();
+    initApp();
+  });
 </script>
 
 </body>
