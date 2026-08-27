@@ -163,6 +163,43 @@
       border-top: 1px solid var(--border-color);
     }
 
+    .stats-groups {
+      display: flex;
+      gap: 24px;
+    }
+
+    .stats-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      min-width: 0;
+    }
+
+    .stats-group + .stats-group {
+      border-left: 1px solid var(--border-color);
+      padding-left: 24px;
+    }
+
+    .stats-group-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #3b2e2d;
+    }
+
+    @media (max-width: 600px) {
+      .stats-groups {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .stats-group + .stats-group {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+      }
+    }
+
     .stat-item .value {
       font-size: 1.4rem;
       font-weight: 700;
@@ -738,28 +775,60 @@
 
   <!-- Dashboard -->
   <div class="dashboard-card">
-    <div class="progress-container">
-      <div class="progress-bar-wrapper">
-        <div class="progress-bar" id="progressBar"></div>
+    <div class="stats-groups">
+      <div class="stats-group">
+        <div class="stats-group-title">🛒 구매목록</div>
+        <div class="progress-container">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" id="progressBar-buy"></div>
+          </div>
+          <div class="progress-text" id="progressText-buy">0%</div>
+        </div>
+        <div class="stats-summary">
+          <div class="stat-item">
+            <div class="value" id="totalCount-buy">0</div>
+            <div class="label">총 품목</div>
+          </div>
+          <div class="stat-item">
+            <div class="value" id="checkedCount-buy" style="color: var(--primary-color);">0</div>
+            <div class="label">준비 완료</div>
+          </div>
+          <div class="stat-item">
+            <div class="value" id="skippedCount-buy" style="color: var(--tag-required);">0</div>
+            <div class="label">구매 안 함</div>
+          </div>
+          <div class="stat-item">
+            <div class="value" id="remainingCount-buy" style="color: var(--secondary-color);">0</div>
+            <div class="label">남은 품목</div>
+          </div>
+        </div>
       </div>
-      <div class="progress-text" id="progressText">0%</div>
-    </div>
-    <div class="stats-summary">
-      <div class="stat-item">
-        <div class="value" id="totalCount">136</div>
-        <div class="label">총 품목</div>
-      </div>
-      <div class="stat-item">
-        <div class="value" id="checkedCount" style="color: var(--primary-color);">0</div>
-        <div class="label">준비 완료</div>
-      </div>
-      <div class="stat-item">
-        <div class="value" id="skippedCount" style="color: var(--tag-required);">0</div>
-        <div class="label">구매 안 함</div>
-      </div>
-      <div class="stat-item">
-        <div class="value" id="remainingCount" style="color: var(--secondary-color);">136</div>
-        <div class="label">남은 품목</div>
+      <div class="stats-group">
+        <div class="stats-group-title">🎒 출산가방</div>
+        <div class="progress-container">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" id="progressBar-bag"></div>
+          </div>
+          <div class="progress-text" id="progressText-bag">0%</div>
+        </div>
+        <div class="stats-summary">
+          <div class="stat-item">
+            <div class="value" id="totalCount-bag">0</div>
+            <div class="label">총 품목</div>
+          </div>
+          <div class="stat-item">
+            <div class="value" id="checkedCount-bag" style="color: var(--primary-color);">0</div>
+            <div class="label">준비 완료</div>
+          </div>
+          <div class="stat-item">
+            <div class="value" id="skippedCount-bag" style="color: var(--tag-required);">0</div>
+            <div class="label">구매 안 함</div>
+          </div>
+          <div class="stat-item">
+            <div class="value" id="remainingCount-bag" style="color: var(--secondary-color);">0</div>
+            <div class="label">남은 품목</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -4051,12 +4120,27 @@
   let saveIndicatorTimer = null;
 
   // Elements
-  const progressBar = document.getElementById("progressBar");
-  const progressText = document.getElementById("progressText");
-  const totalCountEl = document.getElementById("totalCount");
-  const checkedCountEl = document.getElementById("checkedCount");
-  const remainingCountEl = document.getElementById("remainingCount");
-  const skippedCountEl = document.getElementById("skippedCount");
+  const BAG_CATEGORIES = ["출산가방-병원", "출산가방-조리원"];
+  const statGroups = {
+    buy: {
+      selector: (cat) => !BAG_CATEGORIES.includes(cat),
+      progressBar: document.getElementById("progressBar-buy"),
+      progressText: document.getElementById("progressText-buy"),
+      totalCountEl: document.getElementById("totalCount-buy"),
+      checkedCountEl: document.getElementById("checkedCount-buy"),
+      skippedCountEl: document.getElementById("skippedCount-buy"),
+      remainingCountEl: document.getElementById("remainingCount-buy"),
+    },
+    bag: {
+      selector: (cat) => BAG_CATEGORIES.includes(cat),
+      progressBar: document.getElementById("progressBar-bag"),
+      progressText: document.getElementById("progressText-bag"),
+      totalCountEl: document.getElementById("totalCount-bag"),
+      checkedCountEl: document.getElementById("checkedCount-bag"),
+      skippedCountEl: document.getElementById("skippedCount-bag"),
+      remainingCountEl: document.getElementById("remainingCount-bag"),
+    },
+  };
   const categoryTabs = document.getElementById("categoryTabs");
   const searchInput = document.getElementById("searchInput");
   const resetBtn = document.getElementById("resetBtn");
@@ -4164,18 +4248,21 @@
   // Update Stats & Progress Bar
   function updateStats() {
     const rows = document.querySelectorAll(".item-row");
-    const total = rows.length;
-    const checked = document.querySelectorAll(".real-checkbox:checked").length;
-    const skipped = document.querySelectorAll(".item-row.skipped").length;
-    const remaining = total - checked - skipped;
-    const percent = total > 0 ? Math.round(((checked + skipped) / total) * 100) : 0;
+    Object.values(statGroups).forEach((group) => {
+      const groupRows = Array.from(rows).filter((row) => group.selector(row.dataset.category));
+      const total = groupRows.length;
+      const checked = groupRows.filter((row) => row.querySelector(".real-checkbox").checked).length;
+      const skipped = groupRows.filter((row) => row.classList.contains("skipped")).length;
+      const remaining = total - checked - skipped;
+      const percent = total > 0 ? Math.round(((checked + skipped) / total) * 100) : 0;
 
-    progressBar.style.width = `${percent}%`;
-    progressText.innerText = `${percent}%`;
-    totalCountEl.innerText = total;
-    checkedCountEl.innerText = checked;
-    skippedCountEl.innerText = skipped;
-    remainingCountEl.innerText = remaining;
+      group.progressBar.style.width = `${percent}%`;
+      group.progressText.innerText = `${percent}%`;
+      group.totalCountEl.innerText = total;
+      group.checkedCountEl.innerText = checked;
+      group.skippedCountEl.innerText = skipped;
+      group.remainingCountEl.innerText = remaining;
+    });
   }
 
   // Filter Items
